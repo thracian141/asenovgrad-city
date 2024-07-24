@@ -1,0 +1,210 @@
+// Modern Teal and Amber Colors
+$blue-teal: #366a74; // Bluish Teal
+$amber-accent: #c1a734; // Amber
+$background-color: #f5f5f5; // Light grey background
+
+// Basic Resets and Typography
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: $background-color;
+  color: #333;
+}
+
+// Header and Footer Styles
+header, footer {
+  background-color: $blue-teal;
+  color: #ffffff;
+}
+
+.mat-toolbar {
+  background-color: $blue-teal !important;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header .spacer {
+  flex: 1;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav ul li a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: $amber-accent;
+}
+
+// Main Content Styles
+main {
+  padding: 20px;
+}
+
+.carousel-mayor-container {
+  display: flex;
+  gap: 20px; /* Gap between carousel and mayor section */
+  margin-bottom: 30px; /* Space below this container */
+}
+
+section {
+  margin-bottom: 30px;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  flex: 1;
+}
+
+section h2 {
+  border-bottom: 3px solid $blue-teal;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  color: $blue-teal;
+  font-size: 1.75rem;
+}
+
+// Card Styles
+mat-card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+mat-card-header {
+  background-color: $blue-teal;
+  color: #ffffff;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  padding: 16px;
+}
+
+mat-card-title {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+mat-card-content {
+  padding: 16px;
+  color: #555555;
+}
+
+mat-card-actions button {
+  color: $amber-accent;
+  font-weight: 500;
+}
+
+// Footer Toolbar
+footer {
+  padding: 20px;
+  text-align: center;
+}
+
+.footer-toolbar {
+  background-color: $blue-teal !important;
+}
+
+// Carousel Styles
+.carousel-container {
+  position: relative;
+  max-width: 100%; /* Full width */
+  height: 60vh; /* 60% of the viewport height */
+  overflow: hidden;
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
+}
+
+.carousel {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 100%; /* Full height */
+  overflow: hidden;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease;
+  width: 100%; /* Ensure track takes full width */
+}
+
+.carousel-slide {
+  min-width: 100%;
+  height: 100%; /* Full height */
+  box-sizing: border-box;
+}
+
+.carousel-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Cover the entire slide area */
+  border-radius: 8px; /* Rounded corners for images */
+}
+
+.carousel-button {
+  background: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: #fff;
+  font-size: 2rem; /* Larger font size for visibility */
+  cursor: pointer;
+  padding: 10px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  border-radius: 50%;
+  transition: background 0.3s ease;
+}
+
+.carousel-button:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+// Mayor Section Styles
+.mayor-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px; /* Gap between image and text */
+  max-width: 100%;
+  background-color: #ffffff; /* Background color */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow effect */
+  padding: 20px; /* Padding inside the container */
+  flex: 1; /* Allow this section to grow */
+}
+
+.mayor-image {
+  width: 200px; /* Increased width for portrait */
+  height: 300px; /* Increased height for portrait */
+  object-fit: cover; /* Ensure image covers the area without distortion */
+  border-radius: 8px; /* Rounded corners for image */
+}
+
+.mayor-info {
+  flex: 1; /* Allow the text to take up remaining space */
+}

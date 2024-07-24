@@ -1,0 +1,88 @@
+<header>
+    <mat-toolbar color="primary">
+      <span>Добре дошли в Община Асеновград</span>
+      <span class="spacer"></span>
+      <nav>
+        <ul>
+          <li><a mat-button routerLink="#news">Новини</a></li>
+          <li><a mat-button routerLink="#about">За Асеновград</a></li>
+          <li><a mat-button routerLink="#services">Услуги</a></li>
+          <li><a mat-button routerLink="#contact">Контакти</a></li>
+        </ul>
+      </nav>
+    </mat-toolbar>
+  </header>
+  
+  <main>
+    <section id="carousel" class="carousel-container">
+      <h2>Нашата Галерия</h2>
+      <div class="carousel">
+        <button (click)="prevSlide()" class="carousel-button prev">‹</button>
+        <div class="carousel-track" [ngStyle]="{'transform': 'translateX(-' + currentIndex * 100 + '%)'}">
+          <mat-card *ngFor="let image of images" class="carousel-slide">
+            <img [src]="image.src" [alt]="image.alt">
+          </mat-card>
+        </div>
+        <button (click)="nextSlide()" class="carousel-button next">›</button>
+      </div>
+    </section>
+  
+    <!-- New Mayor Section -->
+    <section id="mayor" class="mayor-container">
+      <h2>Кмет на Община Асеновград</h2>
+      <div class="mayor-content">
+        <img src="assets/img/kmet1.jpg" alt="Кмет на Асеновград" class="mayor-image">
+        <div class="mayor-info">
+          <p>Име на Кмета: Васил Ангелов Петров</p>
+          <p>Професионален опит и информация за Кмета...</p>
+        </div>
+      </div>
+    </section>
+  
+    <section id="news">
+      <h2>Последни новини</h2>
+      <mat-card>
+        <mat-card-header>
+          <mat-card-title>Заглавие на новина</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <p>Текст на новината...</p>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-button color="accent">Прочети още</button>
+        </mat-card-actions>
+      </mat-card>
+      <!-- Добавете още новини тук -->
+    </section>
+  
+    <section id="about">
+      <h2>За Асеновград</h2>
+      <p>Информация за историята, културата и забележителностите на Асеновград...</p>
+    </section>
+  
+    <section id="services">
+      <h2>Услуги</h2>
+      <mat-list>
+        <mat-list-item>Електронни услуги</mat-list-item>
+        <mat-list-item>Регистрация на населението</mat-list-item>
+        <mat-list-item>Общински такси и такси</mat-list-item>
+        <!-- Добавете още услуги тук -->
+      </mat-list>
+    </section>
+  
+    <section id="contact">
+      <h2>Контакти</h2>
+      <address>
+        <p>Адрес: ул. "Примерна" №1, Асеновград</p>
+        <p>Телефон: 0123 456 789</p>
+        <p>Email: <a href="mailto:info&#64;asenovgrad.bg">info&#64;asenovgrad.bg</a></p>
+      </address>
+    </section>
+  </main>
+  
+  <footer>
+    <mat-toolbar color="primary" class="footer-toolbar">
+      <span>&copy; 2023 Община Асеновград. Всички права запазени.</span>
+    </mat-toolbar>
+  </footer>
+  
